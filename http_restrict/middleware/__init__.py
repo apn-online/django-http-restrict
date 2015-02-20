@@ -13,7 +13,7 @@ class HTTPMethodRestrictionMiddleware(object):
         If a blank iterable is supplied for the setting, then there are no restrictions.
         """
 
-        allowed_methods = getattr(settings, 'ALLOWED_HTTP_METHODS')
+        allowed_methods = getattr(settings, 'ALLOWED_HTTP_METHODS', None)
 
         if allowed_methods is None:
             raise MiddlewareNotUsed
