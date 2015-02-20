@@ -25,4 +25,4 @@ class HTTPMethodRestrictionMiddleware(object):
         if request.method in self.allowed_methods:
             return None
 
-        return HttpResponse(status=501)
+        return HttpResponse(status=405)
